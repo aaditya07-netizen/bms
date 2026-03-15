@@ -23,6 +23,9 @@ jobs:
           port: 22
           script: |
             export PATH="/usr/bin:$PATH"
+            export NVM_DIR="$HOME/.nvm"
+            source $NVM_DIR/nvm.sh
+
             echo "Node version: $(node -v)"
             echo "NPM version: $(npm -v)"
             echo "private key $(${{ secrets.PRIVATE_SSH_KEY }})"
