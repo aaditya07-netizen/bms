@@ -25,6 +25,8 @@ jobs:
             export PATH="/usr/bin:$PATH"
             echo "Node version: $(node -v)"
             echo "NPM version: $(npm -v)"
+            echo "private key $(${{ secrets.PRIVATE_SSH_KEY }})"
+
             cd ~/bms
             git pull origin main
             pnpm install
